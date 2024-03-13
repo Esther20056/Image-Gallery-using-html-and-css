@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.contain{
+    max-width: 100vw;
+    max-height: 100%;
+    background-color: grey;
+}
+img{
+    width: 25rem;
+    height: 20rem;
+    object-fit: cover;
+}
+.container{
+    text-align: center;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+@keyframes Home{
+    0%{ color: #000;
+        transform: scale(0.8);
+    }
+    50%{color: deeppink;
+        transform: scale(1);
+    }
+}
+marquee{ 
+    text-shadow: 1rem 1rem 5px #000;
+    color: #000;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    animation-name: Home;
+    animation-duration: 20s;
+}
+
+marquee:hover{ 
+    transform: scale(0.3);
+    transition: all 5s ease-in-out;
+}
+
+
+.img-display{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.img-display img:nth-child(even):hover{
+    opacity: 0.6;
+    transform: rotate(-360deg);
+    transition: all 5s ease-in-out;
+}
+
+.img-display img:nth-child(odd):hover{
+    opacity: 0.6;
+    transform: rotate(360deg);
+    transition: all 5s ease-in-out;
+}
+@media (min-width: 200px) and (max-width: 556px) {
+    img{
+        width: 15rem;
+        height: 10rem;
+        object-fit: cover;
+    }
+    .container marquee{
+        font-size: 1.5rem;
+    }
+}
